@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <title>PEAS (Partners for Education, Agriculture & Sustainability)</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<body>
+    <!--Navigation-->
+    <div id="test" class="topnav">
+        <div id="logo">
+            <img src="images/1Logo.png" alt="peas logo" align->
+        </div>
+        <span class="right">
+            <a href="#home" class="topnav-button">Home</a>
+            <a href="#program" class="topnav-button">Program</a>
+            <a href="#events" class="topnav-button">Events</a>
+            <a href="#getinvolved" class="topnav-button">Get Involved</a>
+            <a href="#aboutus" class="topnav-button">About Us</a>
+            <a href="#donate" class="topnav-button">Donate</a>
+            <a href="#search" class="topnav-button"><i class="fa fa-search"></i></a>
+        </span>
+    </div>
+    <!--Content will go here-->
+
+    <section>
+        <div class="first">
+            <div class="hero-image">
+                <img src="images/4E0CCDE0-8BFD-44D6-B242-D05D835187B6 1.png" alt="Girl in a hat eating carrots"
+                    style="width:100%; height:auto;">
+            </div>
+            <div class="header">
+                <h1>Want your kids to love Nature?</h1>
+            </div>
+            <p class="description">​PEAS (Partners for Education, Agriculture & Sustainability) is a nonprofit
+                organization based in Austin, TX. Founded with the mission to
+                Cultivating joyful connections with the natural world​ through outdoor learning and edible education."
+            </p>
+            <div class="learnmoreButton">
+                <button id="learnMoreButton" class="button-learnmore">Learn More</button>
+            </div>
+            <!-- The Modal -->
+            <div id="learnButtonModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close"></span>
+                    <img src="images/flower.gif" alt="flower gif">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="second">
+            <div class="child">
+                <img src="images/kid sitting down.png" alt="kid sitting down">
+            </div>
+            <div class="header2">
+                <h1> Nature with PEAS!</h1>
+            </div>
+            <p class="our-outdoor-text">Our outdoor education
+                programs help schools take learning outside by partnering directly with teachers & providing
+                cross-curricular academic programming in gardens, green spaces on campuses throughout Austin area &
+                increasing our depth
+                of programming by bringing what grows in the garden to
+                the kitchen.</p>
+            <button class="checkout-button">Check out our Programs</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="third">
+            <!-- <div class="blackdrop"></div> -->
+            <div class="holdinghand">
+                <img src="images/holding hand.png" alt="kid sitting down">
+            </div>
+            <div class="header3">
+                <h1>Do you have extra time
+                    and want to get involved?</h1>
+            </div>
+            <div class="rectangle5"></div>
+            <p class="our-goal-text">Our goal is to build a team of ambassador volunteers that will be able to support
+                our work at school campuses and our community farm both during and outside of school hours. Volunteers
+                will have a variety of ways they can assist with our schools from garden & outdoor learning area &
+                behind the scenes PEAS program support. </p>
+
+            <div class="volunteer-button">
+                <button>Yes, I want to Volunteer!</button>
+            </div>
+            <div class="donate-button">
+                <button>No, but I can Donate</button>
+            </div>
+        </div>
+    </section>
+    <!--footer will go here-->
+    <div class="footer">
+        <img src="images/Unit 17 _ Code Your Non Profit Website Redesign (HTML/Logo and Title.png" alt="peas logo"
+            class="center">
+        <div class="footer-div">
+            <ul>
+                <li class="footer-button-li"><a href="#contactus" class="footer-button">Contact Us</a></li>
+                <li class="footer-button-li"> <a href="#donate" class="footer-button">Donate</a></li>
+                <li class="footer-button-li"><a href="aboutus" class="footer-button">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("learnButtonModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("learnMoreButton");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        var toTheLeft = 0;
+        $(document).ready(function () {
+            $(".checkout-button").click(function () {
+                if (toTheLeft == 0) {
+                    $(".checkout-button").animate({
+                        left: '250px'
+                    });
+                    toTheLeft = 1;
+                } else if (toTheLeft == 1) {
+                    $(".checkout-button").animate({
+                        left: '860px'
+                    });
+                    toTheLeft = 2;
+                } else {
+                    $(".checkout-button").animate({
+                        left: '541.31px'
+                    });
+                    toTheLeft = 0;
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
